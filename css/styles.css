@@ -1,0 +1,107 @@
+body {
+  background-color: hsl(0, 0%, 98%);
+  color: #40514E;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+}
+
+img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+}
+
+p {
+  color: hsl(229, 6%, 66%);
+  font-size: 0.65rem;
+  font-weight: 400;
+}
+
+.headline p {
+  color: hsl(229, 6%, 66%);
+  font-size: 0.8rem;
+  font-weight: 200;
+  width: 28rem;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+/* Grid System */
+.grid-container {
+  display: grid;
+  grid-template-areas: 'supervisor team calculator'
+    'supervisor karma calculator';
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  height: 30%;
+  padding: 50px;
+}
+
+/* Containers */
+.grid-container div {
+  position: relative;
+  padding: 0 30px 10px;
+  background-color: white;
+  box-shadow: 0 0 10px 2px lightgrey;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+  text-align: left;
+  width: 220px;
+  height: 200px;
+}
+
+.supervisor-container {
+  border-top: hsl(180, 62%, 55%) solid;
+  grid-area: supervisor;
+  align-self: center;
+}
+
+.team-container {
+  grid-area: team;
+  border-top: hsl(0, 78%, 62%) solid;
+}
+
+.karma-container {
+  grid-area: karma;
+  border-top: hsl(34, 97%, 64%) solid;
+}
+
+.calculator-container {
+  align-self: center;
+  grid-area: calculator;
+  border-top: hsl(212, 86%, 64%) solid;
+}
+
+/* Slogan */
+.slogan-1 {
+  font-weight: 200;
+  margin-top: 60px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.slogan-2 {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+@media only screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-areas: 'supervisor team '
+      'karma calculator';
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-areas: 'supervisor'
+      'team'
+      'karma'
+      'calculator';
+  }
+}
